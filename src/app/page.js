@@ -13,7 +13,9 @@ export default function Main(){
     // return <ComponentWithVar data="Teste"/>;
 
 	const virtues = ['Sabedoria', 'Justiça', 'Inteligência'];
-    return <List data={virtues}/>;
+    return <List data={virtues} style={{
+			color: 'red',
+			backgroundColor: '#000'}}/>;
 }
 
 // function ComponentWithVar({data}){
