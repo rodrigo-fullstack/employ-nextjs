@@ -1,0 +1,42 @@
+
+/* Estilos Gerais: */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    padding: 0;
+    outline: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 15px;
+
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+/* Altura e Largura */
+.min-h-100vh{
+    min-height: 100vh,
+
+}
+
+/* Espaçamentos */
+.g-1rem{
+    gap: 1rem;
+    
+}
+
+/* Fontes */
+
+/* .font- */
+
