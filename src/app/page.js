@@ -8,8 +8,9 @@ function Form() {
 				<Image
 					src="./employ.svg"
 					alt="employ logo com um ícone de conta envolvido"
-					width={200}
-					height={200}
+					width={180}
+					height={150}
+					className="logo login-container__logo"
 				/>
 			</section>
 
