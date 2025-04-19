@@ -14,6 +14,7 @@ body{
     }
     .login-container__form{
         width: 483px;
+        max-width: 100%;
         *{
             width: 100%;
         }
@@ -31,5 +32,11 @@ body{
 
     .login-container__title{
         color: var(--blue);
+    }
+}
+
+@media screen and (max-width: 470px) and (orientation: portrait){
+    body{
+        padding: 16px;
     }
 }
