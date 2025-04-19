@@ -1,5 +1,6 @@
 import Image from "next/image";
 import './form.css';
+import './auth.css';
 
 function Form() {
 	return (
