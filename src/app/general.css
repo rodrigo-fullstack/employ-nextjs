@@ -26,13 +26,7 @@
     padding: 8px;
     cursor: pointer;
     border-radius: 15px;
-
-}
-
-.input-box{
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    font-family: "Montserrat";
 }
 
 
@@ -50,5 +44,10 @@
 
 /* Fontes */
 
-/* .font- */
+.f-montserrat{
+    font-family: 'Montserrat';
+}
+.f-open-sans{
+    font-family: 'Open Sans';
+}
 
