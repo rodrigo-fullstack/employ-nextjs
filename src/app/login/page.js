@@ -1,6 +1,10 @@
 import Image from "next/image";
-import './form.css';
-import './auth.css';
+import Button from "../_components/Button.js";
+import Container from "../_components/Container.js";
+import Input from "../_components/Input.js";
+import Title from "../_components/Title.js";
+import '../form.css';
+import '../auth.css';
 
 function Form() {
 	return (
@@ -30,36 +34,6 @@ function Form() {
 		</form>)
 }
 
-function Container({children, className}){
-	return (<section className={"container " + className}>
-		{children}
-	</section>);
-}
-
-function Title({children, className}){
-	return (<h1 className={"title " + className}>
-		{children}
-	</h1>);
-}
-
-function Input({ name, type }) {
-	const labelName = setLabelName(name);
-	return (<label className="input-box login-container__label">
-		{labelName}
-		<input name={name} type={type} className="input login-container__input" />
-	</label>)
-}
-
-function setLabelName(name){
-	switch(name){
-		case 'email':
-			return 'Email';
-		case 'password': 
-			return 'Senha';
-		default: return 'Label'
-	};
-}
-
 function Inputs() {
 	return (<section className={
 		`login-container__inputs container g-1rem`
@@ -67,15 +41,6 @@ function Inputs() {
 		<Input name='email' type='email' />
 		<Input name='password' type='password' />
 	</section>)
-}
-
-function Button({ children, className, type }) {
-	const newClassName = 'btn ' + type + ' ' + className;
-	return (
-		<button type={type} className={newClassName}>
-			{children}
-		</button>
-	)
 }
 
 export default function LoginPage() {
