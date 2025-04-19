@@ -1,0 +1,27 @@
+
+/* Estilos relacionados a formulários */
+.input-box{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form{
+    gap: 50px;
+}
+
+.login-container{
+    .login-container__form{
+        width: 483px;
+        *{
+            width: 100%;
+        }
+    }
+    .login-container__login-btn{
+        font-size: 24px;
+        color: #fff;
+        font-weight: 600;
+        background-color: var(--orange);
+    }
+}
+
