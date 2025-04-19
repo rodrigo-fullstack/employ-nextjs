@@ -5,7 +5,7 @@ import './auth.css';
 function Form() {
 	return (
 		<form className="login-container__form form container">
-			<section class="login-container__logo-box">
+			<Container className="login-container__logo-box">
 				<Image
 					src="./employ.svg"
 					alt="employ logo com um ícone de conta envolvido"
@@ -13,14 +13,33 @@ function Form() {
 					height={150}
 					className="logo login-container__logo"
 				/>
-			</section>
+			</Container>
 
-			<Inputs></Inputs>
+			<Container className="login-container__title-box">
+				<Title className="login-container__title">
+					Login
+				</Title>
+				<hr className="login-container__hr"/>
+			</Container>
+
+			<Inputs />
 
 			<Button className='login-container__login-btn' type='submit'>
 				Acessar
 			</Button>
 		</form>)
+}
+
+function Container({children, className}){
+	return (<section className={"container " + className}>
+		{children}
+	</section>);
+}
+
+function Title({children, className}){
+	return (<h1 className={"title " + className}>
+		{children}
+	</h1>);
 }
 
 function Input({ name, type }) {

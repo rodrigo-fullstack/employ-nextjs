@@ -24,4 +24,12 @@ body{
         font-weight: 600;
         background-color: var(--orange);
     }
+    .login-container__hr{
+        border-color: var(--slighterBlue);
+        height: 1px;
+    }
+
+    .login-container__title{
+        color: var(--blue);
+    }
 }

@@ -9,6 +9,7 @@
 :root{
     --orange: #FCB986;
     --slighterBlue: #99A1FF;
+    --blue: #576EFF;
 }
 
 /* Estilos Gerais: */
@@ -17,6 +18,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title{
+    font-family: Montserrat;
 }
 
 .btn{
