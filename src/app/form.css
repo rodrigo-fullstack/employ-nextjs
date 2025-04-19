@@ -6,11 +6,23 @@
     gap: 4px;
 }
 
+.input{
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    padding: 8px;
+}
+
 .form{
     gap: 50px;
 }
 
+
+
 .login-container{
+    .login-container__input{
+        border: 2px solid var(--slighterBlue);
+    }
     .login-container__form{
         width: 483px;
         *{
