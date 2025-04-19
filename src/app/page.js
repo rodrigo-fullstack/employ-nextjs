@@ -1,14 +1,17 @@
 import Image from "next/image";
+import './form.css';
 
 function Form() {
 	return (
-		<form className="login-container__logo-box container g-1rem">
-			<Image
-				src="./employ.svg"
-				alt="employ logo com um ícone de conta envolvido"
-				width={200}
-				height={200}
-			/>
+		<form className="login-container__form form container">
+			<section class="login-container__logo-box">
+				<Image
+					src="./employ.svg"
+					alt="employ logo com um ícone de conta envolvido"
+					width={200}
+					height={200}
+				/>
+			</section>
 
 			<Inputs></Inputs>
 
@@ -29,7 +32,7 @@ function Input({ name, type }) {
 
 function Inputs() {
 	return (<section className={
-		`login-container__inputs container`
+		`login-container__inputs container g-1rem`
 	}>
 		<Input name='email' type='email' />
 		<Input name='password' type='password' />
