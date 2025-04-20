@@ -39,13 +39,11 @@
     font-family: "Montserrat";
 }
 
-
 /* Altura e Largura */
 .min-h-100vh{
     min-height: 100vh,
 
 }
-
 /* Espaçamentos */
 .g-1rem{
     gap: 1rem;
@@ -61,3 +59,6 @@
     font-family: 'Open Sans';
 }
 
+.bold{
+    font-weight: 700;
+}

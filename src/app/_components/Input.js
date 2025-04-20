@@ -1,7 +1,12 @@
-export default function Input({ name, type }) {
+export default function Input({ name, type, forgotPassword = false }) {
 	const labelName = setLabelName(name);
 	return (<label className="input-box login-container__label">
-		{labelName}
+		{forgotPassword ? 
+		(<div className="row">
+			<span>{labelName}</span>
+			<span className="bold login-container__forgot-password">Esqueceu a senha?</span>
+		</div>)
+		: labelName}
 		<input name={name} type={type} className="input login-container__input" />
 	</label>)
 }

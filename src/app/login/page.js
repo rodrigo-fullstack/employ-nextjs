@@ -39,7 +39,7 @@ function Inputs() {
 		`login-container__inputs container g-1rem`
 	}>
 		<Input name='email' type='email' />
-		<Input name='password' type='password' />
+		<Input name='password' type='password' forgotPassword={true}/>
 	</section>)
 }
 
