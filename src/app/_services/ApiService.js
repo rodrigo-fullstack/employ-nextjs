@@ -1,12 +1,14 @@
 
 
 export default class ApiService{
-    static baseUrl = 'http://localhost:8000';
+    static baseUrl = 'http://localhost:8000/api';
     
     static async makeRequest(url, method, body = null){
         const options = {
             method: method,
-            headers: {}
+            headers: {
+                Accept: 'application/json'
+            }
         }
         
         if(body){
