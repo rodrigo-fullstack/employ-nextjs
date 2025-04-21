@@ -8,7 +8,6 @@ export default function Input({ name, type, forgotPassword = false, errors = nul
 		let errorsItems = errors.map(element =>
 			(<Error>{element}</Error>)
 		);
-		console.log(errorsItems);
 		errorList = <List className="list--error">
 			{errorsItems}
 		</List>
