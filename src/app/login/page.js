@@ -8,10 +8,12 @@ import Title from "../_components/Title.js";
 import '../form.css';
 import '../auth.css';
 import { login } from "../_services/actions.js";
+import { useActionState } from "react";
 
 function Form() {
+	const [data, formAction] = useActionState(login, null);
 	return (
-		<form className="login-container__form form container" action={login}>
+		<form className="login-container__form form container" action={formAction}>
 			<Container className="login-container__logo-box">
 				<Image
 					src="./employ.svg"
