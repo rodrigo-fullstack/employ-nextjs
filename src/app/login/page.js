@@ -12,6 +12,8 @@ import { useActionState } from "react";
 
 function Form() {
 	const [data, formAction] = useActionState(login, null);
+
+	if(data) console.log(data);
 	return (
 		<form className="login-container__form form container" action={formAction}>
 			<Container className="login-container__logo-box">
