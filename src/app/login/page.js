@@ -29,7 +29,7 @@ function Form() {
 				<hr className="login-container__hr"/>
 			</Container>
 
-			<Inputs />
+			<Inputs errors={data?.errors}/>
 
 			<Button className='login-container__login-btn' type='submit'>
 				Acessar
@@ -37,13 +37,13 @@ function Form() {
 		</form>)
 }
 
-function Inputs() {
-	return (<section className={
-		`login-container__inputs container g-1rem`
+function Inputs({errors = null}) {
+	return (<Container className={
+		`login-container__inputs g-1rem`
 	}>
-		<Input name='email' type='email' />
-		<Input name='password' type='password' forgotPassword={true}/>
-	</section>)
+		<Input name='email' type='email' errors={errors?.email}/>
+		<Input name='password' type='password' errors={errors?.password} forgotPassword={true}/>
+	</Container>)
 }
 
 export default function LoginPage() {
