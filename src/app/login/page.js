@@ -1,3 +1,5 @@
+'use client';
+
 import Image from "next/image";
 import Button from "../_components/Button.js";
 import Container from "../_components/Container.js";

@@ -1,6 +1,8 @@
 
 
 export default class ApiService{
+    static baseUrl = 'http://localhost:8000';
+    
     static async makeRequest(url, method, body = null){
         const options = {
             method: method,
@@ -24,7 +26,10 @@ export default class ApiService{
                 }
             }
 
-            const json = await response.json();
+            const jsonText = await response.text();
+            console.log(jsonText);
+            return;
+            const json = JSON.parse(jsonText);
             if(json.error){
                 throw new Error(json.message);
             }
