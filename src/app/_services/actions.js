@@ -1,6 +1,6 @@
 'use server'
 
-import { redirect } from "next/dist/server/api-utils/index.js";
+import { redirect } from "next/navigation.js";
 import AuthService from "./AuthService.js";
 import { cookies } from "next/headers.js";
 
@@ -20,6 +20,4 @@ export async function login(previousState, formData) {
         path: '/'
     });
     redirect('/dashboard');
-    
-
 }
