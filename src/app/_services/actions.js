@@ -1,7 +1,17 @@
 'use server'
 
-import AuthService from "./AuthService";
+import { redirect } from "next/dist/server/api-utils/index.js";
+import AuthService from "./AuthService.js";
 
 export async function login(formData) {
-    return await AuthService.login(formData);
+    const response = await AuthService.login(formData);
+
+    // if(response.error){
+    //     return response;
+    // }
+
+    return response;
+    redirect('/dashboard');
+    
+
 }
