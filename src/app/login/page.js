@@ -5,10 +5,11 @@ import Input from "../_components/Input.js";
 import Title from "../_components/Title.js";
 import '../form.css';
 import '../auth.css';
+import { login } from "../_services/actions.js";
 
 function Form() {
 	return (
-		<form className="login-container__form form container">
+		<form className="login-container__form form container" action={login}>
 			<Container className="login-container__logo-box">
 				<Image
 					src="./employ.svg"
