@@ -9,6 +9,8 @@
 :root{
     --orange: #FCB986;
     --slighterBlue: #99A1FF;
+    --lightBlue: #D6E5FC;
+    --lightBlue86: rgb(214, 229, 252, 0.86);
     --blue: #576EFF;
 }
 
@@ -26,6 +28,8 @@
 }
 
 .title{
+    font-weight: 600;
+    font-size: 24px;
     font-family: Montserrat;
 }
 
