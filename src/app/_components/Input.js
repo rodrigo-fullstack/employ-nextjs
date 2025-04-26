@@ -8,7 +8,8 @@ export default function Input(
 		type = 'text',
 		forgotPassword = false,
 		errors = null,
-		hasLabel = true
+		hasLabel = true,
+		placeholder = ""
 	}
 ) {
 	let labelName = null;
@@ -34,7 +35,12 @@ export default function Input(
 			</div>)
 			: labelName && <span>{labelName}</span>
 		}
-		<input name={name} type={type} className={"input " + className} />
+		<input
+			name={name}
+			type={type}
+			className={"input " + className} 
+			placeholder={placeholder}
+			/>
 		{errorList ?? ''}
 	</label>)
 }
