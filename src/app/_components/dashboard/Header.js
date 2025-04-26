@@ -2,7 +2,7 @@ import Image from "next/image";
 import Button from "../Button";
 import Container from "../Container";
 import Input from "../Input";
-import { Row } from "../Row";
+import Row from "../Row";
 
 
 export default function Header() {

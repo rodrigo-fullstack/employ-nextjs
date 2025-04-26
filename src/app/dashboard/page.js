@@ -1,9 +1,7 @@
-import Container from "../_components/Container";
-
 function Dashboard(){
-    return (<Container>
-        <div className="container">Teste</div>
-    </Container>);
+    return (<Row>
+        
+    </Row>);
 }
 
 export default function DashboardPage(){

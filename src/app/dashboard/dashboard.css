@@ -87,6 +87,7 @@ body {
     padding: 0rem 36px;
 }
 
+/* Estilização do header do dashboard */
 .dashboard-header{
     display: flex;
     justify-content: space-between;
