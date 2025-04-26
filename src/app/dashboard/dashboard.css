@@ -80,3 +80,9 @@ body {
         cursor: pointer;
     }
 }
+
+.content{
+    margin-left:298px;
+    flex-grow: 1;
+    padding: 0rem 36px;
+}

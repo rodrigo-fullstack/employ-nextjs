@@ -1,3 +1,4 @@
+import Container from "../_components/Container";
 import Header from "../_components/dashboard/Header"
 import SideBar from "../_components/dashboard/SideBar"
 
@@ -8,12 +9,12 @@ export default function Layout({ children }) {
   <>
     <SideBar />
 
-    <section class="content">
+    <Container className="content jcs">
       <Header />
       <main>
         {children}
       </main>
-    </section>
+    </Container>
   </>
   )
 }
