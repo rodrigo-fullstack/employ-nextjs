@@ -57,6 +57,22 @@
     font-size: 18px;
 }
 
+.jcc{
+    justify-content: center;
+}
+
+.alc{
+    align-items: center;
+}
+
+.jcs{
+    justify-content: start;
+}
+
+.als{
+    align-items: start;
+}
+
 /* Altura e Largura */
 .min-h-100vh{
     min-height: 100vh,
