@@ -6,20 +6,19 @@ FROM base AS deps
 # Pode ser necessário para resolver um problema
 WORKDIR /app
 
-RUN addgroup dev && adduser -S rodrigo -G dev \
-&& chmod 755 ./ && chown rodrigo:dev ./
 
-USER rodrigo
-COPY . /app
-
+COPY package.json .
+# RUN addgroup dev && adduser -S rodrigo -G dev \
+# && chmod 755 ./ && chown rodrigo:dev ./
 # Executa comandos antes de iniciar o container
-RUN sudo npm install
+RUN npm install
+COPY . .
 
 # Define variáveis de ambiente
 # ENV VARIAVEL=123123123
 
-# Executa um comando quando o container é iniciado
-CMD ["npm", "run dev"]
-
 # Expõe uma porta do computador para acessar a aplicação
 EXPOSE 3000
+
+# Executa um comando quando o container é iniciado
+CMD ["npm", "run", "dev"]
