@@ -1,10 +1,13 @@
 import Image from "next/image";
+import List from "../List";
+import Container from "../Container";
+import Title from "../Title";
 
 
 export default function SideBar() {
     return (
         <aside className="sidebar dashboard-sidebar container">
-            <section className="sidebar__logo-container dashboard-sidebar__logo-container">
+            <Container className="sidebar__logo-container dashboard-sidebar__logo-container">
                 <Image
                     className="sidebar__logo dashboard-sidebar__logo"
                     src='./employ.svg'
@@ -12,17 +15,17 @@ export default function SideBar() {
                     height={150}
                     alt="Logo do Employ"
                 />
-            </section>
-            <hr></hr>
+            <hr className="sidebar__hr dashboard-sidebar__hr"/>
+            </Container>
 
             <SideBarMenu />
 
             <section className="sidebar__settings-container dashboard-sidebar__settings-container">
-                <Image 
-                src="./settings.svg"
-                width={32}
-                height={32}
-                className="sidebar__settings-icon dashboard-sidebar__settings-icon"
+                <Image
+                    src="./settings.svg"
+                    width={32}
+                    height={32}
+                    className="sidebar__settings-icon dashboard-sidebar__settings-icon"
                 />
             </section>
         </aside>
@@ -32,23 +35,24 @@ export default function SideBar() {
 function SideBarMenu() {
     return (
         <nav className="sidebar__menu dashboard-sidebar__menu">
-            <ul className="list sidebar__list dashboard-sidebar__list">
-                <SideBarMenuLink src="./vagas.svg" alt="Ícone de vaga com uma pessoa segurando um formulário.">
+            <List className=" sidebar__list dashboard-sidebar__list">
+                <SideBarMenuItem src="./vacancy.svg" alt="Ícone de vaga com uma pessoa segurando um formulário."
+                className="dashboard-sidebar__link--active">
                     Vagas
-                </SideBarMenuLink>
-                <SideBarMenuLink src="./candidaturas.svg" alt="Ícone de candidaturas.">
+                </SideBarMenuItem>
+                <SideBarMenuItem src="./candidate.svg" alt="Ícone de candidaturas.">
                     Candidaturas
-                </SideBarMenuLink>
-                <SideBarMenuLink src="./empresas.svg" alt="Ícone de empresa preenchido em branco.">
+                </SideBarMenuItem>
+                <SideBarMenuItem src="./company.svg" alt="Ícone de empresa preenchido em branco.">
                     Empresas
-                </SideBarMenuLink>
-            </ul>
+                </SideBarMenuItem>
+            </List>
         </nav>
     )
 }
 
-function SideBarMenuLink({ src, alt, children }) {
-    return (<a className="link sidebar__link dashboard-sidebar__link" href="/dashboard">
+function SideBarMenuItem({ className="", src, alt, children }) {
+    return (<a className={"link sidebar__link dashboard-sidebar__link " + className} href="/dashboard">
         <li className="item sidebar__item dashboard-sidebar__item">
             <span className="icon sidebar__item-icon dashboard-sidebar__item-icon">
                 <Image
@@ -60,9 +64,9 @@ function SideBarMenuLink({ src, alt, children }) {
                 />
             </span>
 
-            <span className="text sidebar__item-text dashboard-sidebar__item-text">
+            <Title className="sidebar__item-text dashboard-sidebar__item-text">
                 {children}
-            </span>
+            </Title>
         </li>
     </a>);
 }
