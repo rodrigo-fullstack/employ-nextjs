@@ -1,8 +1,20 @@
 import List from "./List.js";
 import Error from "./Error.js";
 
-export default function Input({ name, type, forgotPassword = false, errors = null }) {
-	const labelName = setLabelName(name);
+export default function Input(
+	{
+		className = '',
+		name,
+		type = 'text',
+		forgotPassword = false,
+		errors = null,
+		hasLabel = true
+	}
+) {
+	let labelName = null;
+	if (hasLabel) {
+		labelName = setLabelName(name);
+	}
 	let errorList = null;
 	if (errors) {
 		let errorsItems = errors.map(element =>
@@ -14,14 +26,15 @@ export default function Input({ name, type, forgotPassword = false, errors = nul
 	}
 
 
-	return (<label className="input-box login-container__label">
+	return (<label className="input-box">
 		{forgotPassword ?
 			(<div className="row">
-				<span>{labelName}</span>
+				{labelName && <span>{labelName}</span>}
 				<span className="bold login-container__forgot-password">Esqueceu a senha?</span>
 			</div>)
-			: labelName}
-		<input name={name} type={type} className="input login-container__input" />
+			: labelName && <span>{labelName}</span>
+		}
+		<input name={name} type={type} className={"input " + className} />
 		{errorList ?? ''}
 	</label>)
 }
@@ -32,6 +45,6 @@ function setLabelName(name) {
 			return 'Email';
 		case 'password':
 			return 'Senha';
-		default: return 'Label'
+		default: return name
 	};
 }
