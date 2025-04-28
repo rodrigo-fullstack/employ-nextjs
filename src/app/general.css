@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+body{
+    font-family: "Open Sans";
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -12,6 +16,11 @@
     --lightBlue: #D6E5FC;
     --lightBlue86: rgb(214, 229, 252, 0.86);
     --blue: #576EFF;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Estilos Gerais: */
@@ -60,6 +69,10 @@
 .item--error{
     color: white;
     font-size: 18px;
+}
+
+.link{
+    text-decoration: underline;
 }
 
 .jcc{
