@@ -11,7 +11,7 @@ export default function Layout({ children }) {
 
     <Container className="content jcs">
       <Header />
-      <main>
+      <main className="main">
         {children}
       </main>
     </Container>
