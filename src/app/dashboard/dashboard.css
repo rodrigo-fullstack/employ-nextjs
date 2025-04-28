@@ -87,6 +87,7 @@ body {
     margin-left: 298px;
     flex-grow: 1;
     padding: 0rem 36px;
+    margin-bottom: 1rem;
 }
 
 /* Estilização do header do dashboard */
@@ -142,9 +143,19 @@ body {
 
 /* Estilização relativo a vagas */
 .vacancies-container {
+    min-width: 400px;
     width: fit-content;
-    gap: -3px;
     margin-right: 24px;
+    justify-content: start;
+    height: 100vh;
+    overflow-y: scroll;
+    border-radius: 15px;
+    border-bottom: 3px solid var(--blue);
+    border-top: 3px solid var(--blue);
+
+    .vacancy:nth-child(n+2){
+        margin-top: -3px;
+    }
     .vacancy {
         padding: 22px 12px;
         border-radius: 15px;
