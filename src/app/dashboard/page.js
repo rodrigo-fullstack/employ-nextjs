@@ -10,7 +10,7 @@ function Dashboard() {
         <Container className="vacancies-container">
             <Vacancy />
         </Container>
-        
+
         <VacancySelected />
     </Row>);
 }
@@ -133,3 +133,10 @@ function VacancyDescription() {
     )
 }
 
+function VacancySelected(){
+    return (
+        <Article className="vacancy-selected-container">
+            abc
+        </Article>
+    )
+}
