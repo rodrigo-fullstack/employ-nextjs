@@ -52,7 +52,7 @@ function SideBarMenu() {
 }
 
 function SideBarMenuItem({ className="", src, alt, children }) {
-    return (<a className={"link sidebar__link dashboard-sidebar__link " + className} href="/dashboard">
+    return (<a className={"sidebar__link dashboard-sidebar__link " + className} href="/dashboard">
         <li className="item sidebar__item dashboard-sidebar__item">
             <span className="icon sidebar__item-icon dashboard-sidebar__item-icon">
                 <Image
