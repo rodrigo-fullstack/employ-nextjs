@@ -15,7 +15,7 @@ body {
     min-height: 100dvh;
     border-radius: 15px;
 
-    .dashboard-sidebar__logo-container{
+    .dashboard-sidebar__logo-container {
         gap: 20px;
     }
 
@@ -51,6 +51,7 @@ body {
                     align-items: center;
                     justify-content: center;
                     gap: 4px;
+
                     .dashboard-sidebar__item-text {
                         color: white;
                     }
@@ -63,12 +64,13 @@ body {
                 }
             }
 
-            .dashboard-sidebar__link--active{
-                box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+            .dashboard-sidebar__link--active {
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             }
         }
     }
-    .dashboard-sidebar__settings-container{
+
+    .dashboard-sidebar__settings-container {
         position: absolute;
         background-color: var(--orange);
         padding: 11px;
@@ -81,31 +83,32 @@ body {
     }
 }
 
-.content{
-    margin-left:298px;
+.content {
+    margin-left: 298px;
     flex-grow: 1;
     padding: 0rem 36px;
 }
 
 /* Estilização do header do dashboard */
-.dashboard-header{
+.dashboard-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     padding: 20px 0px;
-    .dashboard-header__search-form{
+
+    .dashboard-header__search-form {
         width: fit-content;
         display: flex;
         align-items: center;
     }
 
-    .icon--profile{
+    .icon--profile {
         border-radius: 100%;
     }
 }
 
-.input--search{
+.input--search {
     width: 451px;
     height: 42px;
     border-top-left-radius: 15px;
@@ -118,12 +121,12 @@ body {
     border-bottom: 2px solid var(--blue);
 }
 
-.input--search::placeholder{
+.input--search::placeholder {
     opacity: 80%;
     font-family: "open sans";
 }
 
-.btn--search{
+.btn--search {
     padding: 0;
     border-radius: 0px;
     width: 70px;
@@ -131,4 +134,98 @@ body {
     background-color: var(--blue);
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+}
+
+.main {
+    width: 100%;
+}
+
+/* Estilização relativo a vagas */
+.vacancies-container {
+    width: fit-content;
+    gap: -3px;
+    margin-right: 24px;
+    .vacancy {
+        padding: 22px 12px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 0px 3px inset var(--blue);
+        width: 400px;
+        gap: 0.7rem;
+
+        .vacancy__info-container {
+            width: 100%;
+            gap: 14px;
+
+            .vacancy__info-header {
+                gap: 14px;
+
+                .vacancy__info-title-container {
+                    background-color: var(--orange);
+                    color: white;
+                    padding: 5px;
+                }
+            }
+
+            .vacancy__info-content {
+                width: 100%;
+                justify-content: start;
+                align-items: start;
+                gap: 1rem;
+
+                .vacancy__info-company {
+                    text-decoration: underline;
+
+                }
+
+                .vacancy__info-general {
+                    display: inline-flex;
+                    flex-wrap: wrap;
+                    justify-content: start;
+                    gap: 5px;
+                    width: 100%;
+                    font-size: 12px;
+
+                    .vacancy__info-text {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                    }
+
+                    .vacancy__info-text::after {
+                        display: inline-flex;
+                        content: '';
+                        background-color: var(--orange);
+                        border-radius: 100%;
+                        width: 5px;
+                        height: 5px;
+                    }
+
+                    .vacancy__info-text:last-of-type::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .vacancy__actions{
+            width: 100%;
+            .vacancy__btn{
+                background: var(--blue);
+                color: white;
+
+            }
+
+            .vacancy__btn-actions{
+                gap: 5px;
+            }
+        }
+        .vacancy__skills{
+            font-size: 14px;
+        }
+    }
+}
+
+.vacancy-selected-container {
+    width: 100%;
+    background-color: red;
 }
