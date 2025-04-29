@@ -19,24 +19,6 @@ a{
 
 /* Estilos Gerais: */
 
-.list{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 1rem 0rem 1rem 2rem;
-    border-radius: 15px;
-}
-
-.list--error{
-    background-color: rgb(246, 103, 103);
-    margin-top: 8px;
-}
-
-.item--error{
-    color: white;
-    font-size: 18px;
-}
-
 .link{
     text-decoration: underline;
 }
