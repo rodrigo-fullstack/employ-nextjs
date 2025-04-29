@@ -2,11 +2,11 @@ import Image from "next/image";
 import List from "../List";
 import Container from "../Container";
 import Title from "../Title";
-
+import styles from "../Container.module.css";
 
 export default function SideBar() {
     return (
-        <aside className="sidebar dashboard-sidebar container">
+        <aside className={`sidebar dashboard-sidebar ${styles.container}`}>
             <Container className="sidebar__logo-container dashboard-sidebar__logo-container">
                 <Image
                     className="sidebar__logo dashboard-sidebar__logo"
@@ -20,14 +20,14 @@ export default function SideBar() {
 
             <SideBarMenu />
 
-            <section className="sidebar__settings-container dashboard-sidebar__settings-container">
+            <Container className="sidebar__settings-container dashboard-sidebar__settings-container">
                 <Image
                     src="./settings.svg"
                     width={32}
                     height={32}
                     className="sidebar__settings-icon dashboard-sidebar__settings-icon"
                 />
-            </section>
+            </Container>
         </aside>
     );
 }
@@ -35,7 +35,7 @@ export default function SideBar() {
 function SideBarMenu() {
     return (
         <nav className="sidebar__menu dashboard-sidebar__menu">
-            <List className=" sidebar__list dashboard-sidebar__list">
+            <List className="sidebar__list dashboard-sidebar__list">
                 <SideBarMenuItem src="./vacancy.svg" alt="Ícone de vaga com uma pessoa segurando um formulário."
                 className="dashboard-sidebar__link--active">
                     Vagas
