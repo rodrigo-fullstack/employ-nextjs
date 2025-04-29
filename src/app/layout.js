@@ -1,4 +1,5 @@
 import '@/app/general.css';
+import { primaryFont } from "./fonts.js";
 
 export default function RootLayout({children}){
     return(
@@ -7,7 +8,7 @@ export default function RootLayout({children}){
                 <link rel="icon" href="./favicon.ico" />
             </head>
             
-            <body>
+            <body className={primaryFont.className}>
                 {children}
             </body>
         </html>
