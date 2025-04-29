@@ -2,16 +2,17 @@ import Container from "../_components/Container";
 import Header from "../_components/dashboard/Header"
 import SideBar from "../_components/dashboard/SideBar"
 
-import './dashboard.css';
+import styles from "../_components/dashboard/Dashboard.module.css";
 
 export default function Layout({ children }) {
+
   return (
   <>
     <SideBar />
 
-    <Container className="content jcs">
+    <Container className={`${styles.content} jcs`}>
       <Header />
-      <main className="main">
+      <main className={`${styles.main}`}>
         {children}
       </main>
     </Container>
