@@ -3,10 +3,11 @@ import Container from "../_components/Container";
 import Row from "../_components/Row";
 import Vacancy from "../_components/dashboard/Vacancy";
 import VacancySelected from "../_components/dashboard/VacancySelected";
+import styles from "../_components/dashboard/Vacancy.module.css";
 
 function Dashboard() {
     return (<>
-        <Container className="vacancies-container">
+        <Container className={`${styles['vacancies-container']}`}>
             <Vacancy />
             <Vacancy />
             <Vacancy />
