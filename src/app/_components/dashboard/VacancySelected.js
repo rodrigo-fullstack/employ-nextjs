@@ -5,6 +5,7 @@ import Row from "../Row";
 import Title from "../Title";
 import Button from "../Button";
 import styles from "./Vacancy.module.css";
+import dsStyles from "./Dashboard.module.css";
 
 export default function VacancySelected() {
     return (
@@ -79,7 +80,7 @@ function VacancyInfoContent() {
 
             <Row className={`vacancy__info-recruiter-row jcs ${styles["vacancy__info-recruiter-row"]}`}>
                 <Image
-                    className={`person vacancy__info-recruiter-image ${styles["vacancy__info-recruiter-image"]}`}
+                    className={`person vacancy__info-recruiter-image ${styles["vacancy__info-recruiter-image"]} ${dsStyles["person"]}`}
                     width={50}
                     height={50}
                     src="./recruiter.svg"

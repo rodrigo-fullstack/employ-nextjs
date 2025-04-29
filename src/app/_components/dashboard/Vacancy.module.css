@@ -116,6 +116,7 @@
 
     .vacancy__info-recruiter-row{
         width: 100%;
+        justify-content: start;
         align-items: center;
         gap: 17px;
     }
