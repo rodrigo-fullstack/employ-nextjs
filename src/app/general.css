@@ -19,11 +19,6 @@ a{
 
 /* Estilos Gerais: */
 
-.row{
-    display: flex;
-    justify-content: space-between;
-}
-
 .list{
     display: flex;
     flex-direction: column;
