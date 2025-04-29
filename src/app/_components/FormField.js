@@ -1,4 +1,4 @@
-import Error from "./Error";
+import ErrorItem from "./ErrorItem";
 
 export default function FormField({
 	label = "",
@@ -16,9 +16,9 @@ export default function FormField({
 
 			{hasErrors && <List className="list--error">
 				{errors.map(error => {
-					<Error>
+					<ErrorItem>
 						{error}
-					</Error>
+					</ErrorItem>
 				})}
 			</List>}
 		</label>

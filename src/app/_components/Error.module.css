@@ -1,0 +1,9 @@
+.list--error{
+    background-color: rgb(246, 103, 103);
+    margin-top: 8px;
+}
+
+.item--error{
+    color: white;
+    font-size: 18px;
+}

@@ -1,5 +1,5 @@
 import List from "./List.js";
-import Error from "./Error.js";
+import ErrorItem from "./ErrorItem.js";
 
 
 export default function Input({
@@ -39,7 +39,7 @@ function InputOld(
 	let errorList = null;
 	if (errors) {
 		let errorsItems = errors.map(element =>
-			(<Error>{element}</Error>)
+			(<ErrorItem>{element}</ErrorItem>)
 		);
 		errorList = <List className="list--error">
 			{errorsItems}
