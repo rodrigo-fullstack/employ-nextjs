@@ -1,7 +1,27 @@
 import List from "./List.js";
 import Error from "./Error.js";
 
-export default function Input(
+
+export default function Input({
+	name = "",
+	id = "",
+	type = "text",
+	className = "",
+	placeholder = "",
+	...props
+}){
+	return (
+		<input 
+		type={type}
+		name={name}
+		className={"input " + className}
+		placeholder={placeholder}
+		{...props}
+		/>
+	)
+}
+
+function InputOld(
 	{
 		className = '',
 		name,
@@ -31,7 +51,7 @@ export default function Input(
 		{forgotPassword ?
 			(<div className="row">
 				{labelName && <span>{labelName}</span>}
-				<span className="bold login-container__forgot-password">Esqueceu a senha?</span>
+				<span className="bold login__forgot-password">Esqueceu a senha?</span>
 			</div>)
 			: labelName && <span>{labelName}</span>
 		}

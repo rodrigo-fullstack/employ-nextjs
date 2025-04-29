@@ -4,6 +4,7 @@ import Image from "next/image";
 import Button from "../_components/Button.js";
 import Container from "../_components/Container.js";
 import Input from "../_components/Input.js";
+import FormField from "../_components/FormField.js";
 import Title from "../_components/Title.js";
 import '../form.css';
 import '../auth.css';
@@ -15,27 +16,27 @@ function Form() {
 
 	if(data) console.log(data);
 	return (
-		<form className="login-container__form form container" action={formAction}>
-			<Container className="login-container__logo-box">
+		<form className="login__form form container" action={formAction}>
+			<Container className="login__logo-box">
 				<Image
 					src="./employ.svg"
 					alt="employ logo com um ícone de conta envolvido"
 					width={180}
 					height={150}
-					className="logo login-container__logo"
+					className="logo login__logo"
 				/>
 			</Container>
 
-			<Container className="login-container__title-box">
-				<Title className="login-container__title">
+			<Container className="login__title-box">
+				<Title className="login__title">
 					Login
 				</Title>
-				<hr className="login-container__hr"/>
+				<hr className="login__hr"/>
 			</Container>
 
 			<Inputs errors={data?.errors}/>
 
-			<Button className='login-container__login-btn' type='submit'>
+			<Button className='login__login-btn' type='submit'>
 				Acessar
 			</Button>
 		</form>)
@@ -43,15 +44,20 @@ function Form() {
 
 function Inputs({errors = null}) {
 	return (<Container className={
-		`login-container__inputs g-1rem`
+		`login__inputs g-1rem`
 	}>
-		<Input name='email' type='email' errors={errors?.email}/>
-		<Input name='password' type='password' errors={errors?.password} forgotPassword={true}/>
+		<FormField labelClassName="login__field" labelTextClassName="login__label-text" label="Email" name="email" errors={errors?.email}> 
+			<Input name="email" type="email" className="login__input" placeholder="Ex: rodrigo@gmail.com"/>
+		</FormField>
+		
+		<FormField labelClassName="login__field login__field--password" labelTextClassName="login__label-text" label="Senha" name="password" errors={errors?.password}> 
+			<Input name="password" type="password" className="login__input"/>
+		</FormField>
 	</Container>)
 }
 
 export default function LoginPage() {
-	return <main className="login-container container">
+	return <main className="login container">
 		<Form></Form>
 	</main>
 }
