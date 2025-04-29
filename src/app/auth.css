@@ -6,37 +6,37 @@ body{
 }
 
 
-.login-container{
-    .login-container__logo-box{
+.login{
+    .login__logo-box{
         width: fit-content;
         height: fit-content;
     }
     
-    .login-container__input{
+    .login__input{
         border: 2px solid var(--slighterBlue);
     }
-    .login-container__form{
+    .login__form{
         width: 483px;
         max-width: 100%;
         *{
             width: 100%;
         }
     }
-    .login-container__login-btn{
+    .login__login-btn{
         font-size: 24px;
         color: #fff;
         background-color: var(--orange);
     }
-    .login-container__hr{
+    .login__hr{
         border-color: var(--slighterBlue);
         height: 1px;
     }
 
-    .login-container__title{
+    .login__title{
         color: var(--blue);
     }
 
-    .login-container__forgot-password{
+    .login__forgot-password{
         display: flex;
         justify-content: end;
     }
