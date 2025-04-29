@@ -5,6 +5,7 @@ import InputSearch from "../InputSearch";
 import ButtonSearch from "../ButtonSearch";
 import Row from "../Row";
 import styles from "./Header.module.css";
+import dsStyles from "./Dashboard.module.css";
 
 export default function Header() {
     return (
@@ -60,7 +61,9 @@ function ProfileItem({ children, src = "", alt = "" }) {
                 width={50}
                 height={50}
                 alt={alt}
-                className={`icon icon--${children} header__profile-icon dashboard-header__profile-icon ${styles["dashboard-header__profile-icon"]}`}
+                className={`icon icon--${children} header__profile-icon dashboard-header__profile-icon ${styles["dashboard-header__profile-icon"]}
+                ${dsStyles.person}
+                `}
                 src={src}
             />
         </div>
