@@ -1,6 +1,7 @@
+import styles from "./Button.module.css";
 
 export default function Button({ children, className, type }) {
-	const newClassName = 'btn ' + type + ' ' + className;
+	const newClassName = `${styles.btn} ${className}`
 	return (
 		<button type={type} className={newClassName}>
 			{children}

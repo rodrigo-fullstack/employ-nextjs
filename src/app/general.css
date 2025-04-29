@@ -30,17 +30,6 @@ a{
     justify-content: space-between;
 }
 
-.btn{
-    padding: 0;
-    outline: none;
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-    border-radius: 15px;
-    font-weight: 600;
-    font-family: "Montserrat";
-}
-
 .list{
     display: flex;
     flex-direction: column;
