@@ -2,7 +2,7 @@ import styles from "./Form.module.css";
 import Input from "./Input";
 
 export default function InputSearch({
-    search = "",
+    search = "Vagas",
     name = "search_vacancy",
     className = "",
 }) {

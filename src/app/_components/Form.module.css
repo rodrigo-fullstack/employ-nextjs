@@ -20,10 +20,11 @@
 .input--search {
     width: 451px;
     height: 42px;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
     border: none;
     outline: none;
+    border-radius: 0;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
     padding: 10px;
     border-left: 2px solid var(--blue);
     border-top: 2px solid var(--blue);
