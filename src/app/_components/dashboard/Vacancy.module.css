@@ -3,7 +3,6 @@
 .vacancies-container {
     min-width: 400px;
     width: fit-content;
-    margin-right: 24px;
     justify-content: start;
     height: 100dvh;
     overflow-y: scroll;

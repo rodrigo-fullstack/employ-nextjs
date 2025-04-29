@@ -3,12 +3,14 @@
     flex-grow: 1;
     padding: 0rem 36px;
     margin-bottom: 1rem;
+    gap: 24px;
 }
 
 .icon--profile, .person {
     border-radius: 100%;
 }
 
-.main {
+.dashboard-main {
     width: 100%;
+    gap: 1rem;
 }

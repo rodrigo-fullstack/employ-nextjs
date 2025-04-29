@@ -5,7 +5,7 @@ import Vacancy from "../_components/dashboard/Vacancy";
 import VacancySelected from "../_components/dashboard/VacancySelected";
 
 function Dashboard() {
-    return (<Row className={"main__content"}>
+    return (<>
         <Container className="vacancies-container">
             <Vacancy />
             <Vacancy />
@@ -13,7 +13,7 @@ function Dashboard() {
         </Container>
 
         <VacancySelected />
-    </Row>);
+    </>);
 }
 
 export default function DashboardPage() {
