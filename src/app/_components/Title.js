@@ -1,4 +1,4 @@
-import styles from "./title.module.css";
+import styles from "./Title.module.css";
 import { secondaryFont } from "../fonts.js";
 
 export default function Title({children, className}){
