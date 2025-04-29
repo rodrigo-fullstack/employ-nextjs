@@ -9,9 +9,16 @@
     border-radius: 15px;
     border-bottom: 3px solid var(--blue);
     border-top: 3px solid var(--blue);
-
-    .vacancy:nth-child(n+2){
+    .vacancy{
         margin-top: -3px;
+    }
+    
+    .vacancy:first{
+        margin-top: -3px;
+        border-top: none;
+    }
+    .vacancy:last-of-type{
+        border-bottom: none;
     }
 }
 
