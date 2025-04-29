@@ -3,6 +3,7 @@ import Header from "../_components/dashboard/Header"
 import SideBar from "../_components/dashboard/SideBar"
 
 import styles from "../_components/dashboard/Dashboard.module.css";
+import MainRow from "../_components/MainRow";
 
 export default function Layout({ children }) {
 
@@ -12,9 +13,9 @@ export default function Layout({ children }) {
 
     <Container className={`${styles.content} jcs`}>
       <Header />
-      <main className={`${styles.main}`}>
+      <MainRow className={`${styles['dashboard-main']}`}>
         {children}
-      </main>
+      </MainRow>
     </Container>
   </>
   )
