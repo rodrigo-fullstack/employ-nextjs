@@ -27,6 +27,11 @@ a{
     text-decoration: underline;
 }
 
+.icon{
+    cursor: pointer;
+    background: none;
+}
+
 .jcc{
     justify-content: center;
 }
