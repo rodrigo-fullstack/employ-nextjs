@@ -18,11 +18,11 @@
 
 @media screen and (max-width: 768px){
     .content{
-        margin: 0;
+        margin-left: 0;
         padding: 0px 15px;
     }
     
     .dashboard-main{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 }

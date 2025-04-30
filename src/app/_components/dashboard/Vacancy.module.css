@@ -1,8 +1,8 @@
 
 /* Estilização relativo a vagas */
 .vacancies-container {
-    min-width: 400px;
-    width: fit-content;
+    max-width: 400px;
+    width: 100%;
     justify-content: start;
     height: 100vh;
     overflow-y: scroll;
@@ -27,7 +27,6 @@
     border-radius: 15px;
     box-shadow: 0px 0px 0px 3px inset var(--blue);
     width: 400px;
-    max-width: 100%;
     gap: 0.7rem;
 
     .vacancy__info-container {
@@ -139,9 +138,16 @@
     }
 }
 
-@media screen and (max-width: var(--mobile)){
-    
+@media screen and (max-width: 768px){
     .vacancies-container{
-        order: 2;
+        
+    }
+
+    .vacancy{
+        width: 100%;
+    }
+
+    .vacancy--selected{
+        height: 71dvh;
     }
 }
