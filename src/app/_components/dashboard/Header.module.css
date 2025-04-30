@@ -12,3 +12,21 @@
         align-items: center;
     }
 }
+
+.dashboard-header--mobile {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .dashboard-header--desktop {
+        display: none;
+    }
+    
+    .dashboard-header--mobile {
+        display: flex;
+        align-items: center;
+        .dashboard-header__actions-row{
+            gap: 10px;
+        }
+    }
+}

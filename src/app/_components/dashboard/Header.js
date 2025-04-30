@@ -7,9 +7,10 @@ import Row from "../Row";
 import styles from "./Header.module.css";
 import dsStyles from "./Dashboard.module.css";
 
-export default function Header() {
+// Header Desktop
+export function Header() {
     return (
-        <header className={`header dashboard-header ${styles["dashboard-header"]}`}>
+        <header className={`header dashboard-header ${styles["dashboard-header"]} ${styles["dashboard-header--desktop"]}`}>
             <Container className={`header__title-container dashboard-header__title-container ${styles["dashboard-header__title-container"]}`}>
                 <h1 className={`title header__title dashboard-header__title ${styles["dashboard-header__title"]}`}>
                     Vagas
@@ -47,23 +48,85 @@ function Profile() {
                 notification
             </ProfileItem>
 
-            <ProfileItem src="./profile.svg" alt="Ícone de perfil.">
+            <ProfileItem src="./profile.svg" alt="Ícone de perfil." className={`${dsStyles.person}`}>
                 profile
             </ProfileItem>
         </Row>
     );
 }
 
-function ProfileItem({ children, src = "", alt = "" }) {
+function ProfileItem({ children, src = "", alt = "", className = "" }) {
     return (
         <div className={`${children} header__profile-item dashboard-header__profile-item ${styles["dashboard-header__profile-item"]}`}>
             <Image
                 width={50}
                 height={50}
                 alt={alt}
+                className={`icon icon--${children} header__profile-icon dashboard-header__profile-icon ${styles["dashboard-header__profile-icon"]} ${className}`}
+                src={src}
+            />
+        </div>
+    );
+}
+
+// Header Mobile
+export function HeaderMobile() {
+    return (
+        <header className={`header dashboard-header ${styles["dashboard-header"]} ${styles["dashboard-header--mobile"]}`}>
+            <Row className={`${styles['dashboard-header__actions-row']}`}>
+                <span className={`icon ${styles['dashboard-header__menu-icon']} ${styles['dashboard-header__action']}`}
+                >
+                    <Image 
+                    width={38}
+                    height={41}
+                    src="./menu.svg"
+                    alt="Ícone de menu"
+                    />
+                </span>
+                
+                <a href="/dashboard" className={`${styles['dashboard-header__logo']} ${styles['dashboard-header__action']}`}
+                >
+                    <Image 
+                    width={38}
+                    height={41}
+                    src="./logo-mobile.svg"
+                    alt="Logo Mobile"
+                    />
+                </a>
+            </Row>
+
+            <ProfileMobile />
+        </header>
+    );
+}
+
+function ProfileMobile() {
+    return (
+        <Row className={`jcs header__profile-container dashboard-header__profile-container ${styles["dashboard-header__profile-container"]}`}>
+            <ProfileItemMobile src="./chat.svg" alt="Ícone de chat.">
+                chat
+            </ProfileItemMobile>
+
+            <ProfileItemMobile src="./notification.svg" alt="Ícone de notificação.">
+                notification
+            </ProfileItemMobile>
+
+            <ProfileItemMobile src="./profile.svg" alt="Ícone de perfil." className={`${dsStyles.person}`}>
+                profile
+            </ProfileItemMobile>
+        </Row>
+    );
+}
+
+function ProfileItemMobile({ children, src = "", alt = "", className = "" }) {
+    return (
+        <div className={`${children} header__profile-item dashboard-header__profile-item ${styles["dashboard-header__profile-item"]}`}>
+            <Image
+                width={39}
+                height={39}
+                alt={alt}
                 className={`icon icon--${children} header__profile-icon dashboard-header__profile-icon ${styles["dashboard-header__profile-icon"]}
-                ${dsStyles.person}
-                `}
+                ${className} `}
                 src={src}
             />
         </div>
