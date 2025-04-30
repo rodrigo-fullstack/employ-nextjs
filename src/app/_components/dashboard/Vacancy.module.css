@@ -27,6 +27,7 @@
     border-radius: 15px;
     box-shadow: 0px 0px 0px 3px inset var(--blue);
     width: 400px;
+    max-width: 100%;
     gap: 0.7rem;
 
     .vacancy__info-container {
@@ -135,5 +136,12 @@
     .vacancy__description-container{
         align-items: start;
         
+    }
+}
+
+@media screen and (max-width: var(--mobile)){
+    
+    .vacancies-container{
+        order: 2;
     }
 }

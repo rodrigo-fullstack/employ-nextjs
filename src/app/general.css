@@ -11,7 +11,7 @@
     --lightBlue86: rgb(214, 229, 252, 0.86);
     --blue: #576EFF;
 
-    --mobile: 500px;
+    --mobile: 768px;
     --tablet: 1040px;
     --desktop: 1440px;
 }
