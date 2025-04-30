@@ -6,14 +6,15 @@
     width: 100%;
     padding: 20px 0px;
 
-    .dashboard-header__search-form {
-        width: fit-content;
-        display: flex;
-        align-items: center;
-    }
 }
 
-.dashboard-header--mobile {
+.dashboard-header__search-form {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-header--mobile, .dashboard-header__search-container--mobile {
     display: none;
 }
 
@@ -27,6 +28,19 @@
         align-items: center;
         .dashboard-header__actions-row{
             gap: 10px;
+        }
+    }
+
+    .dashboard-header__search-container--mobile{
+        display: flex;
+        max-width: 100%;
+        align-items: start;
+        gap: 10px;
+        margin-bottom: 20px;
+        .dashboard-header__search-form {
+            width: 100%;
+            display: flex;
+            align-items: center;
         }
     }
 }

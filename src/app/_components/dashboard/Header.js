@@ -6,6 +6,7 @@ import ButtonSearch from "../ButtonSearch";
 import Row from "../Row";
 import styles from "./Header.module.css";
 import dsStyles from "./Dashboard.module.css";
+import Title from "../Title";
 
 // Header Desktop
 export function Header() {
@@ -76,21 +77,21 @@ export function HeaderMobile() {
             <Row className={`${styles['dashboard-header__actions-row']}`}>
                 <span className={`icon ${styles['dashboard-header__menu-icon']} ${styles['dashboard-header__action']}`}
                 >
-                    <Image 
-                    width={38}
-                    height={41}
-                    src="./menu.svg"
-                    alt="Ícone de menu"
+                    <Image
+                        width={38}
+                        height={41}
+                        src="./menu.svg"
+                        alt="Ícone de menu"
                     />
                 </span>
-                
+
                 <a href="/dashboard" className={`${styles['dashboard-header__logo']} ${styles['dashboard-header__action']}`}
                 >
-                    <Image 
-                    width={38}
-                    height={41}
-                    src="./logo-mobile.svg"
-                    alt="Logo Mobile"
+                    <Image
+                        width={38}
+                        height={41}
+                        src="./logo-mobile.svg"
+                        alt="Logo Mobile"
                     />
                 </a>
             </Row>
@@ -98,6 +99,18 @@ export function HeaderMobile() {
             <ProfileMobile />
         </header>
     );
+}
+
+export function SearchRowMobile() {
+    return (
+        <Container className={`${styles["dashboard-header__search-container--mobile"]}`}>
+            <Title className={`title header__title dashboard-header__title ${styles["dashboard-header__title"]}`}>
+                Vagas
+            </Title>
+
+            <FormSearch />
+        </Container>
+    )
 }
 
 function ProfileMobile() {
