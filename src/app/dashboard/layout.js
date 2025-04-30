@@ -8,19 +8,19 @@ import MainRow from "../_components/MainRow";
 export default function Layout({ children }) {
 
   return (
-  <>
-    <SideBar />
+    <>
+      <SideBar />
 
-    <Container className={`${styles.content} jcs`}>
-      <Header />
       <HeaderMobile />
+      <Container className={`${styles.content} jcs`}>
+        <Header />
 
-      <SearchRowMobile />
+        <SearchRowMobile />
 
-      <MainRow className={`${styles['dashboard-main']}`}>
-        {children}
-      </MainRow>
-    </Container>
-  </>
+        <MainRow className={`${styles['dashboard-main']}`}>
+          {children}
+        </MainRow>
+      </Container>
+    </>
   )
 }
