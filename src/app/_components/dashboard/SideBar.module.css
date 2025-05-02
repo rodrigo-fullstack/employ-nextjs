@@ -90,5 +90,15 @@
         display: flex;
         background-color: var(--lightBlue);
         z-index: 10000;
+        padding: 7px 15px;
+        .dashboard-sidebar__logo-container{
+            position: relative;
+            .dashboard-sidebar__menu-icon{
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
     }
+
 }

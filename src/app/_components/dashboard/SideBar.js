@@ -40,6 +40,16 @@ export default function SideBar({ menuMobileOpen = null, setMenuMobileOpen = nul
     return (
         <aside className={`${styles["dashboard-sidebar"]} ${menuMobileOpen && styles["dashboard-sidebar--mobile"]}`}>
             <Container className={`${styles["dashboard-sidebar__logo-container"]}`}>
+                {menuMobileOpen && <span className={`icon ${styles['dashboard-sidebar__menu-icon']} ${styles['dashboard-sidebar__action']}`}
+                    onClick={() => setMenuMobileOpen(false)}>
+                    <Image
+                        width={38}
+                        height={41}
+                        src="./menu.svg"
+                        alt="Ícone de menu"
+                    />
+                </span>}
+
                 <Image
                     className={styles["dashboard-sidebar__logo"]}
                     src='./employ.svg'
