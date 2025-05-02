@@ -71,12 +71,14 @@ function ProfileItem({ children, src = "", alt = "", className = "" }) {
 }
 
 // Header Mobile
-export function HeaderMobile() {
+export function HeaderMobile({
+    setMenuMobileOpen,
+}) {
     return (
         <header className={`header dashboard-header ${styles["dashboard-header"]} ${styles["dashboard-header--mobile"]}`}>
             <Row className={`${styles['dashboard-header__actions-row']}`}>
                 <span className={`icon ${styles['dashboard-header__menu-icon']} ${styles['dashboard-header__action']}`}
-                >
+                 onClick={()=>setMenuMobileOpen(true)}>
                     <Image
                         width={38}
                         height={41}

@@ -1,13 +1,44 @@
+'use client'
 import Image from "next/image";
 import List from "../List";
 import Container from "../Container";
 import Title from "../Title";
 import styles from "./SideBar.module.css";
 import containerStyles from "../Container.module.css";
+import { useState } from "react";
 
-export default function SideBar() {
+export default function SideBar({ menuMobileOpen = null, setMenuMobileOpen = null }) {
+    console.log(menuMobileOpen);
+    if (menuMobileOpen === null) {
+        return (
+            <aside className={`${styles["dashboard-sidebar"]}`}>
+                <Container className={`${styles["dashboard-sidebar__logo-container"]}`}>
+                    <Image
+                        className={styles["dashboard-sidebar__logo"]}
+                        src='./employ.svg'
+                        width={180}
+                        height={150}
+                        alt="Logo do Employ"
+                    />
+                    <hr className={styles["dashboard-sidebar__hr"]} />
+                </Container>
+
+                <SideBarMenu />
+
+                <Container className={styles["dashboard-sidebar__settings-container"]}>
+                    <Image
+                        src="./settings.svg"
+                        width={32}
+                        height={32}
+                        className={styles["dashboard-sidebar__settings-icon"]}
+                    />
+                </Container>
+            </aside>
+        );
+    }
+
     return (
-        <aside className={`${styles["dashboard-sidebar"]} ${containerStyles.container}`}>
+        <aside className={`${styles["dashboard-sidebar"]} ${menuMobileOpen && styles["dashboard-sidebar--mobile"]}`}>
             <Container className={`${styles["dashboard-sidebar__logo-container"]}`}>
                 <Image
                     className={styles["dashboard-sidebar__logo"]}
@@ -29,8 +60,7 @@ export default function SideBar() {
                     className={styles["dashboard-sidebar__settings-icon"]}
                 />
             </Container>
-        </aside>
-    );
+        </aside>)
 }
 
 function SideBarMenu() {

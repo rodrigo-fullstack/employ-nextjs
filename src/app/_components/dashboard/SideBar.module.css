@@ -2,6 +2,9 @@
 /* Estilização do sidebar do dashboard*/
 .dashboard-sidebar {
     /* background-color: ; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: start;
     padding: 14px 1rem;
     background-color: var(--lightBlue86);
@@ -81,5 +84,11 @@
 @media screen and (max-width: 768px) {
     .dashboard-sidebar{
         display: none;
+    }
+
+    .dashboard-sidebar--mobile{
+        display: flex;
+        background-color: var(--lightBlue);
+        z-index: 10000;
     }
 }
