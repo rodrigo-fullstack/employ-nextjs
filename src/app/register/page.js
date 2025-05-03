@@ -48,16 +48,16 @@ export default function RegisterPage() {
 			<Row className=
 				{`
 					${styles['auth__buttons-container']}
-					${styles['auth__button--previous']}
 					${styles['register__buttons-container']}
-					${styles['register__button--previous']}
 			`}>
-				{step > 1 && <Button className={`
+				{step > 1 ? <Button className={`
+				${styles['auth__button--previous']}
 				${styles['auth__button']}
+				${styles['register__button--previous']}
 				${styles['register__button']}
 			`} action={(e) => handlePrevious(e)}>
 					Voltar
-				</Button>
+				</Button> : <span></span>
 				}
 				{step === maximumSteps ? <Button className=
 					{`
