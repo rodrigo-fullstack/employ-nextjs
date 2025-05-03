@@ -10,8 +10,29 @@ import styles from "../_components/register/Register.module.css";
 import MainContainer from "../_components/MainContainer.js";
 import Container from "../_components/Container.js";
 import Select from "../_components/Select.js";
+import { useState } from "react";
+import Row from "../_components/Row.js";
 
 export default function RegisterPage() {
+	const stepComponents = {
+		1: <GeneralInformation />,
+		2: <LastExperience />,
+		3: <AcademicBackground />,
+		4: <JobContract />,
+	}
+	const maximumSteps = Object.keys(stepComponents).length;
+	const [step, setStep] = useState(1);
+
+	const handleNext = (e) => {
+		e.preventDefault();
+		if (step < maximumSteps) setStep(step + 1);
+	};
+
+	const handlePrevious = (e) => {
+		e.preventDefault();
+		if (step > 1) setStep(step - 1);
+	}
+
 	return <MainContainer className={`
 		${styles.auth} 
 		${styles.register}
@@ -22,20 +43,44 @@ export default function RegisterPage() {
 			${styles['register__form']}
 			`}>
 
-			{/* <GeneralInformation /> */}
-			{/* <LastExperience /> */}
-			{/* <AcademicBackground /> */}
-			<JobContract />
+			{stepComponents[step]}
 
-			<Button className=
+			<Row className=
 				{`
+					${styles['auth__buttons-container']}
+					${styles['auth__button--previous']}
+					${styles['register__buttons-container']}
+					${styles['register__button--previous']}
+			`}>
+				{step > 1 && <Button className={`
+				${styles['auth__button']}
+				${styles['register__button']}
+			`} action={(e) => handlePrevious(e)}>
+					Voltar
+				</Button>
+				}
+				{step === maximumSteps ? <Button className=
+					{`
 					${styles['auth__button']}
+					${styles['auth__button--submit']}
 					${styles['register__button']}
+					${styles['register__button--submit']}
 				`}
-				type="submit"
-			>
-				Próximo
-			</Button>
+					type="submit"
+				>
+					Submeter
+				</Button> : <Button className=
+					{`
+					${styles['auth__button']}
+					${styles['auth__button--next']}
+					${styles['register__button']}
+					${styles['register__button--next']}
+				`}
+					action={(e) => handleNext(e)}
+				>
+					Próximo
+				</Button>}
+			</Row>
 		</Form>
 	</MainContainer>
 }
