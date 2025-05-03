@@ -1,4 +1,5 @@
 import ErrorItem from "./ErrorItem";
+import styles from "./Form.module.css";
 
 export default function FormField({
 	label = "",
@@ -10,8 +11,19 @@ export default function FormField({
 }) {
 	const hasErrors = errors && errors.length !== 0;
 	return (
-		<label className={"input-box " + labelClassName} htmlFor={name}>
-			{label && <span className={"text " + labelTextClassName}>{label}</span>}
+		<label className=
+			{`
+		${styles['input-box']}
+		${labelClassName}
+		`} htmlFor={name}>
+			{label && <span className=
+				{`
+			${styles['text']} 
+			${labelTextClassName}
+			`}
+			>
+				{label}
+			</span>}
 			{children}
 
 			{hasErrors && <List className="list--error">
