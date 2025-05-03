@@ -13,6 +13,13 @@
     padding: 8px;
 }
 
+.select{
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    padding: 8px;
+}
+
 .form--auth{
     display: flex;
     flex-direction: column;

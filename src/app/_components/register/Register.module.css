@@ -22,6 +22,12 @@
         border: 2px solid var(--slighterBlue);
     }
 
+    .auth__select{
+        background-color: var(--slighterBlue);
+        color: white;
+        font-size: 18px;
+    }
+
     .register__form {
         width: 524px;
         max-width: 100%;
@@ -47,17 +53,13 @@
 
     }
 
-    .auth__button--next,
-    .register__button--submit {
-        place-self: end;
-    }
-
     .auth__button--previous {
         background-color: var(--slighterBlue);
         font-size: 18px;
     }
 
     .login__button--submit {
+        background-color: var(--orange);
         font-size: 24px;
     }
 

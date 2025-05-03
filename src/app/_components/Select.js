@@ -8,7 +8,7 @@ export default function Select({
 }) {
 
     const optionsElements = options.map(option => {
-        return <opt className="" value={option}>{option}</opt>
+        return <option className="" value={option}>{option}</option>
     });
     return (<select className=
         {`

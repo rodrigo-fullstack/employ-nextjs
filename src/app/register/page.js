@@ -358,9 +358,9 @@ function AcademicBackground() {
 
 
 				<Select className={`
-					${styles['auth__input']}
-					${styles['register__input']}
-					`} name="current_situation" id="current_situation" />
+					${styles['auth__select']}
+					${styles['register__select']}
+					`} options={['option_1', 'option_2', 'option_3']}name="current_situation" id="current_situation" />
 			</FormField>
 		</Container>
 	)
@@ -405,7 +405,7 @@ function JobContract() {
 				<Select className={`
 					${styles['auth__select']}
 					${styles['register__select']}
-					`} name="contract_type" id="contract_type" />
+					`} options={['option_1', 'option_2', 'option_3']}name="contract_type" id="contract_type" />
 			</FormField>
 
 			<FormField label="Disponibilidade de Início" name="start_availability" labelClassName=
