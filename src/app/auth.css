@@ -1,17 +1,17 @@
 /* Estilos relacionados a autenticação: Cadastro e Login de usuários */
 
-body{
+/* body{
     padding-top: 69px;
     padding-bottom: 69px;
-}
+} */
 
-.login{
-    .login__logo-box{
+.auth{
+    .auth__logo-box{
         width: fit-content;
         height: fit-content;
     }
     
-    .login__input{
+    .auth__input{
         border: 2px solid var(--slighterBlue);
     }
     .login__form{
@@ -21,17 +21,17 @@ body{
             width: 100%;
         }
     }
-    .login__login-btn{
+    .auth__submit-btn{
         font-size: 24px;
         color: #fff;
         background-color: var(--orange);
     }
-    .login__hr{
+    .auth__hr{
         border-color: var(--slighterBlue);
         height: 1px;
     }
 
-    .login__title{
+    .auth__title{
         color: var(--blue);
     }
 
@@ -41,7 +41,7 @@ body{
     }
 }
 
-@media screen and (max-width: 470px) and (orientation: portrait){
+@media screen and (max-width: 746px) and (orientation: portrait){
     body{
         padding: 16px;
     }
