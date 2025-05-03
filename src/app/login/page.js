@@ -15,29 +15,28 @@ import { useActionState } from "react";
 function Form() {
 	const [data, formAction] = useActionState(login, null);
 
-	if (data) console.log(data);
 	return (
-		<form className={`${styles['form']} ${styles['form--auth']} login__form form ${containerStyles.container}`} action={formAction}>
-			<Container className="login__logo-box">
+		<form className={`${styles['form']} ${styles['form--auth']} login__form form`} action={formAction}>
+			<Container className="auth__logo-box">
 				<Image
 					src="./employ.svg"
 					alt="employ logo com um ícone de conta envolvido"
 					width={180}
 					height={150}
-					className="logo login__logo"
+					className="logo auth__logo"
 				/>
 			</Container>
 
-			<Container className="login__title-box">
-				<Title className="login__title">
+			<Container className="auth__title-box">
+				<Title className="auth__title">
 					Login
 				</Title>
-				<hr className="login__hr" />
+				<hr className="auth__hr" />
 			</Container>
 
 			<Inputs errors={data?.errors} />
 
-			<Button className='login__login-btn' type='submit'>
+			<Button className='auth__submit-btn' type='submit'>
 				Acessar
 			</Button>
 		</form>)
@@ -45,20 +44,20 @@ function Form() {
 
 function Inputs({ errors = null }) {
 	return (<Container className={
-		`login__inputs g-1rem`
+		`auth__inputs g-1rem`
 	}>
 		<FormField labelClassName="login__field" labelTextClassName="login__label-text" label="Email" name="email" errors={errors?.email}>
-			<Input name="email" type="email" className="login__input" placeholder="Ex: rodrigo@gmail.com" />
+			<Input name="email" type="email" className="auth__input" placeholder="Ex: rodrigo@gmail.com" />
 		</FormField>
 
 		<FormField labelClassName="login__field login__field--password" labelTextClassName="login__label-text" label="Senha" name="password" errors={errors?.password}>
-			<Input name="password" type="password" className="login__input" />
+			<Input name="password" type="password" className="auth__input" />
 		</FormField>
 	</Container>)
 }
 
 export default function LoginPage() {
-	return <main className={`login ${containerStyles.container}`}>
+	return <main className={`auth ${containerStyles.container}`}>
 		<Form></Form>
 	</main>
 }
