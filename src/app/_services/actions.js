@@ -21,3 +21,11 @@ export async function login(previousState, formData) {
     });
     redirect('/dashboard');
 }
+
+export async function register(previousState, formData){
+    console.log(previousState);
+    console.log(formData);
+    
+    return formData;
+    // const response = await AuthService.register(formData);
+}
