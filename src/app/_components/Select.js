@@ -4,7 +4,8 @@ export default function Select({
     className = "",
     options = [],
     name = "",
-    id = ""
+    id = "", 
+    ...props
 }) {
 
     const optionsElements = options.map(option => {
@@ -14,7 +15,11 @@ export default function Select({
         {`
         ${styles.select}
         ${className}
-    `}>
+    `}
+    name={name}
+    id={id}
+    {...props}
+    >
         {optionsElements}       
     </select>)
 }
