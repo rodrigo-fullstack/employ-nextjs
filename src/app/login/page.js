@@ -31,7 +31,7 @@ function Form() {
 				<Title className="auth__title">
 					Login
 				</Title>
-				<hr className="auth__hr" />
+				<hr className={`auth__hr ${styles['auth__hr']}`} />
 			</Container>
 
 			<Inputs errors={data?.errors} />

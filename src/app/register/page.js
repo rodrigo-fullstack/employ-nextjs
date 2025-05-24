@@ -95,7 +95,11 @@ export default function RegisterPage() {
 		${styles.auth} 
 		${styles.register}
 	`}>
-		<Title className={`auth__title ${styles['register__title']}`}>Cadastro</Title>
+		<Title className={`auth__title ${styles['register__title']}`}>
+			Cadastro
+			<hr className={`auth__hr ${styles['auth__hr']}`} />
+			</Title>
+		
 		<Form className=
 			{`
 			${styles['auth__form']}
