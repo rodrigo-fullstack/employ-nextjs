@@ -14,9 +14,12 @@
     align-items: center;
 }
 
-.dashboard-header--mobile,
-.dashboard-header__search-container--mobile {
+.dashboard-header--mobile {
     display: none;
+}
+
+.dashboard-header__search-container--mobile{
+    display: none !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -38,7 +41,6 @@
     }
 
     .dashboard-header__search-container--mobile {
-        display: flex;
         max-width: 100%;
         align-items: start;
         gap: 10px;
