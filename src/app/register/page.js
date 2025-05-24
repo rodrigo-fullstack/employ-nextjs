@@ -13,6 +13,7 @@ import Select from "../_components/Select.js";
 import { useActionState, useReducer, useState } from "react";
 import Row from "../_components/Row.js";
 import { register } from "../_services/actions.js";
+import Title from "../_components/Title.js";
 
 export default function RegisterPage() {
 	const initialState = {
@@ -90,9 +91,11 @@ export default function RegisterPage() {
 	}
 
 	return <MainContainer className={`
+		auth
 		${styles.auth} 
 		${styles.register}
 	`}>
+		<Title className={`auth__title ${styles['register__title']}`}>Cadastro</Title>
 		<Form className=
 			{`
 			${styles['auth__form']}

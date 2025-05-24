@@ -72,10 +72,19 @@
         color: var(--blue);
     }
 
+    .register__title{
+        place-self: start;
+    }
+
     .login__forgot-password {
         display: flex;
         justify-content: end;
     }
+}
+
+.register{
+    width: fit-content;
+    place-self: center;
 }
 
 @media screen and (max-width: 746px) and (orientation: portrait) {
